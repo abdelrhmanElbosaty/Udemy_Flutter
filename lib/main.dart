@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/layout/bottom_navigation.dart';
 import 'package:flutter_study/modules/stateless_statefull/stateless_stateful_screen.dart';
 import 'modules/bmi/bmi_calculator.dart';
 import 'modules/first_file/home_screen.dart';
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: BottomNavigation(),
     );
   }
 }
