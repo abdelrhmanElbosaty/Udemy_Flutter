@@ -7,6 +7,7 @@ import 'package:flutter_study/modules/todo_list/new_tasks_screen.dart';
 import 'package:flutter_study/shared/components/default_button.dart';
 import 'package:intl/intl.dart';
 import 'package:sqflite/sqflite.dart';
+import '../shared/consts/consts.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -18,7 +19,7 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int currentIndex = 0;
 
-  List<Widget> screens = const [
+  List<Widget> screens = [
     NewTasksScreen(),
     DoneTasksScreen(),
     ArchivedTasksScreen(),
@@ -27,7 +28,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   List<String> titles = const ['New Tasks', 'Done Tasks', 'Archived Tasks'];
 
   Database? dataBase;
-  List <Map> tasks = [];
+
 
   var scaffoldKey = GlobalKey<ScaffoldState>();
   var formKey = GlobalKey<FormState>();
