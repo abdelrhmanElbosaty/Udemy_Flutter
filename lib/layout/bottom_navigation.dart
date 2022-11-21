@@ -259,6 +259,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         print('database opened');
        getFromDataBase(database).then((value) {
          tasks = value;
+         print(value);
        });
       },
     ).then((value) {
