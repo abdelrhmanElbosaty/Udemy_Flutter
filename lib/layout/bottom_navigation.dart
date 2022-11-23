@@ -20,9 +20,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int currentIndex = 0;
 
   List<Widget> screens = [
-    NewTasksScreen(),
-    DoneTasksScreen(),
-    ArchivedTasksScreen(),
+    const NewTasksScreen(),
+    const DoneTasksScreen(),
+    const ArchivedTasksScreen(),
   ];
 
   List<String> titles = const ['New Tasks', 'Done Tasks', 'Archived Tasks'];
@@ -60,7 +60,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (isBottomSheetShown) {
-            if (formKey.currentState?.validate() != null) {
+            if (formKey.currentState != null) {
               if (formKey.currentState!.validate()) {
                 insertInDataBase(
                         title: titleController.text,

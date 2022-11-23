@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/layout/bottom_navigation.dart';
+import 'package:flutter_study/modules/cooking/cooking_screen.dart';
 import 'package:flutter_study/modules/stateless_statefull/stateless_stateful_screen.dart';
 import 'modules/bmi/bmi_calculator.dart';
 import 'modules/first_file/home_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavigation(),
+      home: CookingScreen(),
     );
   }
 }

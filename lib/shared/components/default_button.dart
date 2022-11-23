@@ -71,7 +71,7 @@ Widget defaultTextField({
       }
     },
     obscureText: isPassword,
-    validator: (value) => validate(value ?? ""),
+    validator: (value) => validate(value),
     decoration: InputDecoration(
       hintText: useHint ? labelName : null,
       contentPadding: EdgeInsets.symmetric(
